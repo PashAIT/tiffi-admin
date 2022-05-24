@@ -1,5 +1,5 @@
 <template>
-  <header class="row items-center q-pt-xl q-pl-xl">
+  <header class="row items-center q-pb-xl q-mr-xl">
     <div class="logo col-3">
       <img
         src="images/tiffi-logo.png"
@@ -12,7 +12,7 @@
       <ul class="row items-center justify-around">
         <router-link
           to="/categories"
-          class="cursor-pointer nav column items-center justify-center"
+          class="cursor-pointer nav column items-center justify-center q-mr-md"
           exact-active-class="active"
           >Категория</router-link
         >
@@ -25,6 +25,15 @@
         >
       </ul>
     </nav>
+    <div class="add-product-icon col-6">
+      <div class="row justify-end items-center">
+        <img
+          src="images/addProductIcon.png"
+          class="cursor-pointer"
+          alt="Add product icon"
+        />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -41,6 +50,12 @@ export default {
 <style lang="scss" scoped>
 header {
   font-family: monserrat;
+  .logo {
+    img {
+      width: 12.2vw;
+      height: 2.83vw;
+    }
+  }
   nav {
     ul {
       .nav {
@@ -49,8 +64,8 @@ header {
         cursor: pointer;
         font-style: normal;
         font-weight: 400;
-        font-size: 30px;
-        line-height: 56px;
+        font-size: 1.5625vw;
+        line-height: 3.3vw;
       }
 
       .nav::after {
@@ -72,6 +87,12 @@ header {
         height: 3px;
         background: #000;
       }
+    }
+  }
+  .add-product-icon {
+    img {
+      width: 3.125vw;
+      height: 3.125vw;
     }
   }
 }
