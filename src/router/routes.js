@@ -1,8 +1,13 @@
 const routes = [
-  // {
-  //   path: "/",
-  //   component: () => import("layouts/MainLayout.vue"),
-  // },
+  {
+    path: "/categories",
+    component: () => import("../pages/categories.vue"),
+    alias: "/",
+  },
+  {
+    path: "/products",
+    component: () => import("../pages/products.vue"),
+  },
 ];
 
 export default routes;
