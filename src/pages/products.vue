@@ -1,17 +1,20 @@
 <template>
   <div class="products q-py-lg row">
     <Filter class="col-3" />
+    <products-container class="col-9" />
   </div>
 </template>
 
 <script>
 import { Filter } from "layouts";
+import { ProductsContainer } from "components";
 
 export default {
   components: {
     Filter,
+    ProductsContainer,
   },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
