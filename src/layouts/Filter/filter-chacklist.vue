@@ -10,6 +10,7 @@
     >
       <q-card>
         <q-card-section class="column no-wrap checkLists">
+          <q-input outlined rounded label="Я ищу..." class="q-mb-sm" />
           <q-checkbox
             v-for="list in item.lists"
             :key="`${list.title}${list.id}`"

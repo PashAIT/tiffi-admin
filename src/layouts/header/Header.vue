@@ -64,7 +64,7 @@ header {
         cursor: pointer;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.5625vw;
+        font-size: 1.3vw;
         line-height: 3.3vw;
       }
 
@@ -91,8 +91,8 @@ header {
   }
   .add-product-icon {
     img {
-      width: 3.125vw;
-      height: 3.125vw;
+      width: 3vw;
+      height: 3vw;
     }
   }
 }

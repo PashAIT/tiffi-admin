@@ -117,7 +117,7 @@ export default {
           showText: false,
         },
       ],
-      deleteModal: true,
+      deleteModal: false,
     };
   },
   methods: {
