@@ -35,10 +35,10 @@
             v-for="color in colorChecklist.colors"
             :key="`${color.title}${color.id}`"
             v-model="color.active"
+            :label="color.value"
             :color="color.value"
             class="q-mb-sm"
             size="34px"
-            :keep-color="false"
           ></q-checkbox>
         </q-card-section>
       </q-card>
@@ -121,37 +121,37 @@ export default {
           {
             id: 1,
             value: "black",
-            active: true,
+            active: false,
           },
           {
             id: 2,
             value: "pink",
-            active: true,
+            active: false,
           },
           {
             id: 3,
             value: "blue",
-            active: true,
+            active: false,
           },
           {
             id: 4,
             value: "green",
-            active: true,
+            active: false,
           },
           {
             id: 5,
             value: "red",
-            active: true,
+            active: false,
           },
           {
             id: 6,
             value: "lightblue",
-            active: true,
+            active: false,
           },
           {
             id: 7,
             value: "white",
-            active: true,
+            active: false,
           },
         ],
       },

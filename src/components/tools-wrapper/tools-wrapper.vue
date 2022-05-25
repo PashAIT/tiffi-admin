@@ -8,12 +8,25 @@
       icon="edit"
       class="q-mr-sm"
     />
-    <q-btn push color="gray" text-color="white" round icon="delete" />
+    <q-btn
+      push
+      color="gray"
+      text-color="white"
+      round
+      icon="delete"
+      @click="openDeleteModal"
+    />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openDeleteModal() {
+      this.$emit("openDeleteModal");
+    },
+  },
+};
 </script>
 
 <style></style>

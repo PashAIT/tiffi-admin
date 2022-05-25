@@ -10,6 +10,11 @@ import { Filter } from "layouts";
 import { ProductsContainer } from "components";
 
 export default {
+  data() {
+    return {
+      //
+    };
+  },
   components: {
     Filter,
     ProductsContainer,
