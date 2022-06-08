@@ -1,7 +1,7 @@
 <template>
   <div class="subcategory-list row content-center">
     <div
-      class="col-11 q-mb-sm"
+      class="col-11 q-mb-lg relative-position subcategory"
       style="height: max-content"
       v-for="item in subCategory"
       :key="item.id"
@@ -25,16 +25,23 @@
           ></q-icon>
         </h5>
       </div>
+      <tools-wrapper
+        :bgColor="`grey`"
+        :size="`0.7vw`"
+        class="absolute-right tools"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import toolsWrapper from "../tools-wrapper/tools-wrapper.vue";
 export default {
+  components: { toolsWrapper },
   props: ["subCategory"],
   data() {
     return {
-      activeSubcategoryId: 0,
+      activeSubcategoryId: 1,
     };
   },
   methods: {
@@ -48,6 +55,18 @@ export default {
 
 <style lang="scss" scoped>
 .subcategory-list {
+  .subcategory:hover {
+    .tools {
+      display: block;
+    }
+  }
+  .subcategory {
+    .tools {
+      display: none;
+      top: -80%;
+      right: -12%;
+    }
+  }
   .subcategory-item {
     font-family: monserrat;
     font-style: normal;

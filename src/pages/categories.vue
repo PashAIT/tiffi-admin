@@ -1,16 +1,19 @@
 <template>
-  <div class="categories row justify-evenly q-pt-xl q-pl-xl q-pr-xl">
-    <category-list
-      :categories="categories"
-      @getActive="getActiveIndex"
-      class="col-2"
-    />
-    <subcategory-list
-      class="col-2"
-      :subCategory="activeSubCategory"
-      @getActiveSubCategory="getActiveSubCategory"
-    />
-    <brand-list :brands="activeBrands" class="col-4" />
+  <div class="col justify-center items-center">
+    <div class="categories row justify-evenly q-pt-xl q-pl-xl q-pr-xl q-mb-xl">
+      <category-list
+        :categories="categories"
+        @getActive="getActiveIndex"
+        class="col-2"
+      />
+      <subcategory-list
+        class="col-2"
+        :subCategory="activeSubCategory"
+        @getActiveSubCategory="getActiveSubCategory"
+      />
+      <brand-list :brands="activeBrands" class="col-4" />
+    </div>
+    <add-buttons />
   </div>
 </template>
 
@@ -18,6 +21,7 @@
 import categoryList from "src/components/category/category-list.vue";
 import subcategoryList from "src/components/category/subcategory-list.vue";
 import BrandList from "src/components/category/brand-list.vue";
+import AddButtons from "src/components/category/add-buttons.vue";
 
 export default {
   data() {
@@ -263,7 +267,7 @@ export default {
     },
   },
 
-  components: { categoryList, subcategoryList, BrandList },
+  components: { categoryList, subcategoryList, BrandList, AddButtons },
 };
 </script>
 

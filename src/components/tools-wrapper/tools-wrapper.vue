@@ -1,18 +1,20 @@
 <template>
   <div class="absolute-top-right icons">
     <q-btn
-      push
-      color="gray"
+      unelevated
+      :color="bgColor"
       text-color="white"
       round
       icon="edit"
       class="q-mr-sm"
+      :size="size"
     />
     <q-btn
-      push
-      color="gray"
+      unelevated
+      :color="bgColor"
       text-color="white"
       round
+      :size="size"
       icon="delete"
       @click="openDeleteModal"
     />
@@ -21,6 +23,7 @@
 
 <script>
 export default {
+  props: ["bgColor", "size"],
   methods: {
     openDeleteModal() {
       this.$emit("openDeleteModal");
