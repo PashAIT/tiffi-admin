@@ -198,7 +198,7 @@
                   border-radius: 20px;
                   font-family: monserrat;
                   font-size: 20px;
-                  padding: 0vw 0 0.6vw 0.5vw;
+                  padding: 0vw 0.5vw 0.6vw 0.5vw;
                 "
                 class="q-mb-md"
                 popup-content-style="font-family: monserrat;
@@ -216,7 +216,7 @@
                   border-radius: 20px;
                   font-family: monserrat;
                   font-size: 20px;
-                  padding: 0vw 0 0.6vw 0.5vw;
+                  padding: 0vw 0.5vw 0.6vw 0.5vw;
                 "
                 class="q-mb-md"
                 popup-content-style="font-family: monserrat;

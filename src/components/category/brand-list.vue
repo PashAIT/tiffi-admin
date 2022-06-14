@@ -6,19 +6,19 @@
       :key="item.id"
     >
       <p class="cursor-pointer">{{ item.title }}</p>
-      <tools-wrapper
+      <!-- <tools-wrapper
         :bgColor="`grey`"
         :size="`0.7vw`"
         class="absolute-right tools"
-      />
+      /> -->
     </div>
   </div>
 </template>
 
 <script>
-import toolsWrapper from "../tools-wrapper/tools-wrapper.vue";
+// import toolsWrapper from "../tools-wrapper/delete-tools-wrapper.vue";
 export default {
-  components: { toolsWrapper },
+  // components: { toolsWrapper },
   props: ["brands"],
 };
 </script>
