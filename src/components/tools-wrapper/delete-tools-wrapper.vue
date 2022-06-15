@@ -16,8 +16,12 @@
       persistent
       transition-show="flip-down"
       transition-hide="flip-up"
+      class=""
     >
-      <q-card class="bg-white text-black q-pa-sm">
+      <q-card
+        class="bg-white text-black q-pa-md"
+        style="width: 36vw; max-width: 75vw"
+      >
         <q-bar class="bg-white q-mb-md">
           <q-space></q-space>
           <q-btn dense flat icon="close" v-close-popup></q-btn>
@@ -25,19 +29,26 @@
 
         <q-card-section class="q-pt-none row justify-center items-center">
           <h3
-            class="text-h5 text-center q-mb-lg q-pa-md"
-            style="font-family: monserrat; font-size: 1.3vw"
+            class="text-h5 text-center q-mb-xl q-mt-md"
+            style="font-family: monserrat; font-size: 1.5625vw"
           >
             Вы уверены, что хотите удалить этот элемент?
           </h3>
-          <div class="buttons row full-width justify-center">
-            <q-btn color="black" label="да" rounded class="q-px-xl q-mr-md" />
+          <div class="buttons row full-width justify-evenly q-mb-md">
+            <q-btn
+              color="black"
+              label="Добавить "
+              no-caps
+              class="q-px-lg"
+              style="font-size: 1.2vw; border-radius: 20px"
+            />
             <q-btn
               outline
               color="black"
-              label="нет"
-              rounded
-              class="q-px-xl"
+              label="Отменить"
+              class="q-px-lg"
+              no-caps
+              style="font-size: 1.2vw; border-radius: 20px"
               @click="closeopenDeleteModal"
             />
           </div>
