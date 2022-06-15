@@ -3,7 +3,7 @@
     <div class="categories row justify-evenly q-pt-xl q-pl-xl q-pr-xl q-mb-xl">
       <category-list
         :categories="categories"
-        @getActive="getActiveIndex"
+        @getactiveCategory="getActiveIndex"
         class="col-2"
       />
       <subcategory-list

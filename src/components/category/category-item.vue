@@ -7,26 +7,18 @@
   >
     <h3
       :class="{
-        'active-class': activecategoryId === item.id,
-        'category-item': activecategoryId !== item.id,
+        'active-class': active === item.id,
+        'category-item': active !== item.id,
       }"
     >
       {{ item.title }}
       <q-icon
         :name="
-          item.id === activecategoryId
-            ? 'keyboard_arrow_right'
-            : 'keyboard_arrow_up'
+          item.id === active ? 'keyboard_arrow_right' : 'keyboard_arrow_up'
         "
       ></q-icon>
     </h3>
     <div class="line"></div>
-
-    <!-- <tools-wrapper
-        class="absolute-top-right tools"
-        :bgColor="`grey`"
-        :size="`0.7vw`"
-      /> -->
     <div
       class="icons tools absolute-top-right row"
       v-show="showTools"
@@ -46,17 +38,15 @@
 import DeleteToolsWrapper from "../tools-wrapper/delete-tools-wrapper.vue";
 import editCategoriesToolsWrapper from "../tools-wrapper/edit-categories-tools-wrapper.vue";
 export default {
-  props: ["item"],
+  props: ["item", "active"],
   data() {
     return {
-      activecategoryId: 1,
       showTools: false,
     };
   },
   methods: {
     openSubCategory(id) {
       this.$emit("getActive", id);
-      this.activecategoryId = id;
     },
   },
   components: { editCategoriesToolsWrapper, DeleteToolsWrapper },
