@@ -9,7 +9,7 @@
       <subcategory-list
         class="col-2"
         :subCategory="activeSubCategory"
-        @getActiveSubCategory="getActiveSubCategory"
+        @activeSubCategory="getActiveSubCategory"
       />
       <brand-list :brands="activeBrands" class="col-4" />
     </div>
