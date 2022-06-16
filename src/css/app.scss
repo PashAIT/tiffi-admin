@@ -39,6 +39,15 @@ ul {
     list-style-type: none;
   }
 }
-// .q-img__content > div {
-//   background: none;
-// }
+.add-product-modal-input {
+  .q-field__control {
+    background: $inputBg;
+    border: none;
+    border-radius: 23px;
+  }
+}
+.modal-textarea {
+  .q-field__control {
+    height: 100%;
+  }
+}

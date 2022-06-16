@@ -2,7 +2,7 @@
   <header class="row items-center q-pb-xl q-mr-md">
     <div class="logo col-3">
       <img
-        src="images/tiffi-logo.svg"
+        src="images/tiffi-logo.png"
         class="cursor-pointer"
         @click="$router.push('/')"
         alt="tiffi-logo"
