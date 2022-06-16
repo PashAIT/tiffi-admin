@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <div class="add-product-icon col-6">
-      <div class="row justify-end items-center">
+      <div class="row justify-end items-center" v-show="isProductPage">
         <img
           src="images/addProductIcon.png"
           class="cursor-pointer"
@@ -38,11 +38,15 @@
 </template>
 
 <script>
+import { computed } from "@vue/runtime-core";
 export default {
   data() {
-    return {
-      //
-    };
+    return {};
+  },
+  computed: {
+    isProductPage() {
+      return this.$route.path === "/products";
+    },
   },
 };
 </script>
