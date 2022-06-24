@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pt-xl q-pl-xl q-pr-xl">
+  <div>
     <Header />
     <router-view />
   </div>
@@ -13,4 +13,11 @@ export default defineComponent({
   name: "App",
 });
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: monserrat;
+}
+</style>

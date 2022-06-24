@@ -1,5 +1,8 @@
 <template>
-  <div class="products-container row q-col-gutter-md items-center">
+  <div
+    class="products-container row q-col-gutter-md items-center"
+    style="height: max-content"
+  >
     <product-item
       v-for="item in products"
       :key="`${item.title}.${item.id}`"

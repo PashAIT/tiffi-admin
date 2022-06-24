@@ -1,10 +1,13 @@
 <template>
-  <header class="row items-center q-pb-xl q-mr-md">
+  <header
+    class="row items-center q-pb-xl q-mr-md q-pt-xl q-pl-xl q-pr-xl"
+    v-if="isLoginPage"
+  >
     <div class="logo col-3">
       <img
         src="images/tiffi-logo.png"
         class="cursor-pointer"
-        @click="$router.push('/')"
+        @click="$router.push('/categories')"
         alt="tiffi-logo"
       />
     </div>
@@ -26,25 +29,27 @@
       </ul>
     </nav>
     <div class="add-product-icon col-6">
-      <div class="row justify-end items-center" v-show="isProductPage">
-        <img
-          src="images/addProductIcon.png"
-          class="cursor-pointer"
-          alt="Add product icon"
-        />
-      </div>
+      <add-product />
     </div>
   </header>
 </template>
 
 <script>
+import addProduct from "./add-product.vue";
 export default {
+  components: { addProduct },
   data() {
     return {};
   },
   computed: {
-    isProductPage() {
-      return this.$route.path === "/products";
+    isLoginPage() {
+      if (
+        this.$route.path === "/login" ||
+        this.$route.path === "/" ||
+        this.$route.path === "/forgot-password"
+      )
+        return false;
+      else return true;
     },
   },
 };

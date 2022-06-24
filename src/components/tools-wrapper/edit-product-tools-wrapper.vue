@@ -2,12 +2,10 @@
   <div class="edit-product">
     <q-btn
       unelevated
-      :color="bgColor"
       text-color="white"
       round
       icon="edit"
       class="q-mr-sm"
-      :size="size"
       @click="openEditModal"
     />
   </div>
@@ -19,7 +17,18 @@
       </q-bar>
 
       <q-card-section class="row justify-center">
-        <div class="photo-container col-4"></div>
+        <div class="photo-container col-4 q-py-lg">
+          <!-- <q-input type="file" v-model="photos" multiple /> -->
+          <q-uploader
+            multiple
+            accept=".jpg, image/*"
+            style="max-height: 500px"
+            class="uploader full-width"
+            flat
+            hide-upload-btn
+            @uploaded="addPhotos"
+          />
+        </div>
         <div class="form-container col-6 q-ml-md">
           <div class="row justify-center">
             <div
@@ -57,15 +66,13 @@
             <div class="input-container full-width row justify-between q-mb-lg">
               <div class="left-part col-5 q-gutter-y-lg">
                 <q-input
-                  v-model="text"
                   label="*имя"
                   outlined
                   class="add-product-modal-input"
                   :keep-color="false"
                 />
                 <q-select
-                  v-model="model"
-                  :options="options"
+                  v-model="categories"
                   outlined
                   label="*категория"
                   style="font-family: monserrat; font-size: 18px"
@@ -74,8 +81,7 @@
                   popup-content-style="font-family: monserrat;font-size: 20px;"
                 />
                 <q-select
-                  v-model="model"
-                  :options="options"
+                  v-model="brands"
                   outlined
                   label="*бренд"
                   style="font-family: monserrat; font-size: 18px"
@@ -86,15 +92,13 @@
               </div>
               <div class="right-part col-5 q-gutter-y-lg q-mb-lg">
                 <q-input
-                  v-model="text"
                   label="*имя"
                   outlined
                   class="add-product-modal-input"
                   :keep-color="false"
                 />
                 <q-select
-                  v-model="model"
-                  :options="options"
+                  v-model="subcategories"
                   outlined
                   label="*категория"
                   style="font-family: monserrat; font-size: 18px"
@@ -103,7 +107,6 @@
                   popup-content-style="font-family: monserrat;font-size: 20px;"
                 />
                 <q-input
-                  v-model="text"
                   label="*имя"
                   outlined
                   class="add-product-modal-input"
@@ -141,16 +144,23 @@
 export default {
   data() {
     return {
+      photos: ["erik.jpg", "Raf.jpg"],
       isEditModalOpen: false,
       saleCheckbox: false,
       newProductsCheckbox: false,
       female: false,
       male: false,
+      categories: [],
+      brands: [],
+      subcategories: [],
     };
   },
   methods: {
     openEditModal() {
       this.isEditModalOpen = true;
+    },
+    addPhotos() {
+      console.log(this.photos);
     },
   },
 };
