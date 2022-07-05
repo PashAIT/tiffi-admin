@@ -77,10 +77,19 @@ ul {
     min-height: 110px;
     margin: 0;
   }
+
   .q-uploader__list {
     display: grid;
     justify-content: space-evenly;
     grid-row-gap: 20px;
     grid-template-columns: auto auto;
+  }
+}
+.uploader-add-product {
+}
+.q-color-picker {
+  box-shadow: none;
+  .q-color-picker__palette-rows {
+    justify-content: space-between;
   }
 }

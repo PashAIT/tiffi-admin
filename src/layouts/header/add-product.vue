@@ -1,9 +1,15 @@
 <template>
   <div class="row justify-end items-center" v-show="isProductPage">
-    <img
+    <!-- <img
       src="images/addProductIcon.png"
       class="cursor-pointer"
       alt="Add product icon"
+
+    /> -->
+    <q-btn
+      outline
+      round
+      icon="img:images/addProductIcon.png "
       @click="isDeleteModalOpen = true"
     />
   </div>

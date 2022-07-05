@@ -24,7 +24,7 @@
         </q-card-section>
       </q-card>
     </q-expansion-item>
-    <q-expansion-item
+    <!-- <q-expansion-item
       size="30px"
       v-model="colorChecklist.active"
       :label="colorChecklist.title"
@@ -43,7 +43,22 @@
           ></q-checkbox>
         </q-card-section>
       </q-card>
-    </q-expansion-item>
+    </q-expansion-item> -->
+    <q-color
+      v-model="hex"
+      default-view="palette"
+      no-header
+      no-footer
+      :palette="[
+        '#019A9D',
+        '#D9B801',
+        '#E8045A',
+        '#B2028A',
+        '#2A0449',
+        '#019A9D',
+      ]"
+      class="my-color-picker"
+    ></q-color>
   </div>
 </template>
 
@@ -51,6 +66,7 @@
 export default {
   data() {
     return {
+      hex: "#FF00FF",
       checklists: [
         {
           id: 1,
