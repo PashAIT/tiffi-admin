@@ -24,41 +24,28 @@
         </q-card-section>
       </q-card>
     </q-expansion-item>
-    <!-- <q-expansion-item
+    <q-expansion-item
       size="30px"
       v-model="colorChecklist.active"
       :label="colorChecklist.title"
       class="q-mb-md"
     >
-      <q-card>
-        <q-card-section class="row">
-          <q-checkbox
-            v-for="color in colorChecklist.colors"
-            :key="`${color.title}${color.id}`"
-            v-model="color.active"
-            :label="color.value"
-            :color="color.value"
-            class="q-mb-sm"
-            size="34px"
-          ></q-checkbox>
-        </q-card-section>
-      </q-card>
-    </q-expansion-item> -->
-    <q-color
-      v-model="hex"
-      default-view="palette"
-      no-header
-      no-footer
-      :palette="[
-        '#019A9D',
-        '#D9B801',
-        '#E8045A',
-        '#B2028A',
-        '#2A0449',
-        '#019A9D',
-      ]"
-      class="my-color-picker"
-    ></q-color>
+      <q-color
+        v-model="hex"
+        default-view="palette"
+        no-header
+        no-footer
+        :palette="[
+          '#019A9D',
+          '#D9B801',
+          '#E8045A',
+          '#B2028A',
+          '#2A0449',
+          '#019A9D',
+        ]"
+        class="my-color-picker q-pa-lg"
+      ></q-color>
+    </q-expansion-item>
   </div>
 </template>
 
@@ -66,7 +53,8 @@
 export default {
   data() {
     return {
-      hex: "#FF00FF",
+      hex: "",
+      activeHex: [],
       checklists: [
         {
           id: 1,
